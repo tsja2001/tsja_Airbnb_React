@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import homeBannerImg from '@/assets/image/homeBanner.jpeg'
 import { BannerWapper } from './style'
 
 const HomeBanner = memo(() => {

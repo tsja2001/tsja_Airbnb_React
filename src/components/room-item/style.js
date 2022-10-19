@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const RoomItemWapper = styled.div`
-  width: 33.3%;
+  width: ${props => props.width};
   padding: 0 8px;
   box-sizing: border-box;
   color: ${props => props.theme.font.middle};
@@ -26,6 +26,7 @@ export const RoomItemWapper = styled.div`
     }
     .title {
       font-weight: 600;
+      font-size: 12px;
       padding-top: 5px;
     }
     .price {

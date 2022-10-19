@@ -4,8 +4,6 @@ export const HomeWapper = styled.div`
   .content {
     width: ${(props) => props.theme.contentWidth};
     margin: 0 auto;
-    .goodPrice {
-      margin-top: 30px;
-    }
+    margin-top: 30px;
   }
 `

@@ -1,12 +1,14 @@
+// 每个room卡片
+
 import React, { memo } from 'react'
 import propTypes from 'prop-types'
 import Rating from '@mui/material/Rating'
 import { RoomItemWapper } from './style'
 
 const RoomItem = memo((props) => {
-  const { data } = props
+  const { data, width = '25%' } = props
   return (
-    <RoomItemWapper>
+    <RoomItemWapper width={width}>
       <div className="room-item">
         <div className="imgCover">
           <img src={data.picture_url} alt="" />
