@@ -13,3 +13,27 @@ ul,
 li {
   list-style: none;
 }
+:root {
+  --primary-color: #ff385c;
+}
+body {
+  font-size: 14px;
+}
+.frcc {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.fccc {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.frcsb {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
