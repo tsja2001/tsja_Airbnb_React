@@ -11,5 +11,3 @@ export function cssToObj(css) {
     obj[s[i].replace(/\s/g, '')] = s[i + 1].replace(/^\s+|\s+$/g, '')
   return obj
 }
-
-console.log(cssToObj('z-index: 4; opacity:1; transition-duration: 0.3s;'))
