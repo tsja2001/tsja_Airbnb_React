@@ -5,8 +5,12 @@ export const SectionBarWapper = styled.div`
   flex-flow: row nowrap;
   margin-bottom: 15px;
   font-size: 16px;
+  position: relative;
   .item{
-    padding: 10px 30px;
+    flex-basis: 120px;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    text-align: center;
     border: 1.5px solid #f0f0f0;
     margin-right: 10px;
     ${props => props.theme.mixins.boxShadow};

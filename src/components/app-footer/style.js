@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const AppFotterWapper = styled.div`
   border-top: 1px solid #f0f0f0;
   padding: 30px 0;
+  margin-top: 60px;
   width: 100%;
   .content {
     margin: 0 auto;

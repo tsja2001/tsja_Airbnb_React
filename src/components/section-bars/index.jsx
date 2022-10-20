@@ -1,3 +1,4 @@
+import ScrollView from '@/base-ui/scroll-view'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React, { memo, useState } from 'react'
@@ -15,15 +16,20 @@ const SectionBar = memo((props) => {
 
   return (
     <SectionBarWapper>
-      {list.map((item, index) => (
-        <div
-          key={index}
-          className={classNames('item', { activeItem: index === currentIndex })}
-          onClick={() => clickHandler(item, index)}
-        >
-          {item[lable]}
-        </div>
-      ))}
+      <ScrollView>
+        {/* {list.slice(0,3).map((item, index) => ( */}
+         {list.map((item, index) => (
+          <div
+            key={index}
+            className={classNames('item', {
+              activeItem: index === currentIndex
+            })}
+            onClick={() => clickHandler(item, index)}
+          >
+            {item[lable]}
+          </div>
+        ))}
+      </ScrollView>
     </SectionBarWapper>
   )
 })

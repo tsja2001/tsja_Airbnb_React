@@ -1,4 +1,5 @@
 import SectionBar from '@/components/section-bars'
+import SectionFooter from '@/components/section-footer'
 import SectionHeader from '@/components/section-header'
 import SectionRooms from '@/components/section-rooms'
 import PropTypes from 'prop-types'
@@ -6,12 +7,10 @@ import React, { memo, useCallback, useEffect, useState } from 'react'
 import { HomeSectionV2Wapper } from './style'
 
 const HomeSectionV2 = memo((props) => {
-  console.log('cpm render')
   const { infoData } = props
 
   // const defaultName = Object.keys(infoData?.dest_list ?? {})[0]
   const defaultName = Object.keys(infoData.dest_list)[0]
-  console.log(defaultName)
 
   // 传入tabbar的回掉函数, 点击切换
   const [currentCity, changeCurrentCity] = useState(defaultName)
@@ -40,6 +39,7 @@ const HomeSectionV2 = memo((props) => {
         width="33.33%"
         list={infoData?.dest_list?.[currentCity]}
       ></SectionRooms>
+      <SectionFooter name={currentCity}/>
     </HomeSectionV2Wapper>
   )
 })
