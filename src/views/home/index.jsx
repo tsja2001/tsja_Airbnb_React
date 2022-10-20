@@ -20,7 +20,7 @@ const home = memo(() => {
     (state) => ({
       goodPriceInfo: state.home.goodPriceInfo,
       highScoreInfo: state.home.highScoreInfo,
-      discountInfo: state.home.discountInfo,
+      discountInfo: state.home.discountInfo
     }),
     shallowEqual
   )
@@ -28,10 +28,16 @@ const home = memo(() => {
   return (
     <HomeWapper>
       <HomeBanner />
-      {/* 热门目的地 */}
       <div className="content">
-        <SectionHeader title={discountInfo.title} subtitle={discountInfo.subtitle}></SectionHeader>
-        <SectionRooms width="33.33%" list={discountInfo?.dest_list?.['佛山']}></SectionRooms>
+        {/* 热门目的地 */}
+        <SectionHeader
+          title={discountInfo.title}
+          subtitle={discountInfo.subtitle}
+        ></SectionHeader>
+        <SectionRooms
+          width="33.33%"
+          list={discountInfo?.dest_list?.['佛山']}
+        ></SectionRooms>
         {/*高性价比 */}
         <HomeSection infoData={goodPriceInfo}></HomeSection>
         {/* 好评分 */}
@@ -42,6 +48,5 @@ const home = memo(() => {
 })
 
 export default home
-
 
 // 看1637
