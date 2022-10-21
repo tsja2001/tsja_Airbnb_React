@@ -23,7 +23,7 @@ export const ScrollViewWapper = styled.div`
   .right{
     right: 0;
     top: 50%;
-    transform: translate(10%, -50%);
+    transform: translate(50%, -50%);
   }
   .scollBox{
     width:100%;

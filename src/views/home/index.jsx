@@ -6,6 +6,7 @@ import { fetchHomeDataAction } from '@/store/modules/home'
 import HomeSection from './c-cpns/home-section-v1'
 import HomeSectionV2 from './c-cpns/home-section-v2'
 import { isEmptyObj } from '@/utils/isEmptyObj'
+import HomeLongfor from './c-cpns/home-longfor/inedx'
 
 const home = memo(() => {
   const dispatch = useDispatch()
@@ -16,12 +17,13 @@ const home = memo(() => {
   }, [dispatch])
 
   // 获取state中存储的请求数据
-  const { goodPriceInfo, highScoreInfo, discountInfo, hotRecommendInfo } = useSelector(
+  const { goodPriceInfo, highScoreInfo, discountInfo, hotRecommendInfo, longforInfo } = useSelector(
     (state) => ({
       goodPriceInfo: state.home.goodPriceInfo,
       highScoreInfo: state.home.highScoreInfo,
       discountInfo: state.home.discountInfo,
-      hotRecommendInfo: state.home.hotRecommendInfo
+      hotRecommendInfo: state.home.hotRecommendInfo,
+      longforInfo: state.home.longforInfo
     }),
     shallowEqual
   )
@@ -33,9 +35,11 @@ const home = memo(() => {
         {/* 热门目的地 */}
         {isEmptyObj(discountInfo) && <HomeSectionV2 infoData={discountInfo}></HomeSectionV2> }
         {/*高性价比 */}
-        <HomeSection infoData={goodPriceInfo}></HomeSection>
+        {isEmptyObj(goodPriceInfo) && <HomeSection infoData={goodPriceInfo}></HomeSection>}
+        {/* 可能想去 */}
+        {isEmptyObj(longforInfo) && <HomeLongfor infoData={longforInfo}></HomeLongfor>}
         {/* 好评分 */}
-        <HomeSection infoData={highScoreInfo}></HomeSection>
+        {isEmptyObj(highScoreInfo) && <HomeSection infoData={highScoreInfo}></HomeSection>}
         {/* 热门推荐 */}
         {isEmptyObj(hotRecommendInfo) && <HomeSectionV2 infoData={hotRecommendInfo}></HomeSectionV2> }
       </div>

@@ -1,3 +1,7 @@
+/**
+ * 横向滚动选择条
+ */
+
 import ScrollView from '@/base-ui/scroll-view'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
@@ -17,7 +21,6 @@ const SectionBar = memo((props) => {
   return (
     <SectionBarWapper>
       <ScrollView>
-        {/* {list.slice(0,3).map((item, index) => ( */}
          {list.map((item, index) => (
           <div
             key={index}

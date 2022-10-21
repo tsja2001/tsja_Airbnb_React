@@ -1,4 +1,6 @@
-// import PropTypes from 'prop-types'
+/**
+ * 按照item宽度步进横向滚动
+ */
 import LeftBtn from '@/assets/svg/leftbtn'
 import RightBtn from '@/assets/svg/rightbtn'
 import React, { memo, useEffect, useRef, useState } from 'react'
