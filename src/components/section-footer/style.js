@@ -7,8 +7,9 @@ export const SectionFooterWapper = styled.div`
   color: ${props => props.color};
   .text{
     margin-right: 5px;
+    cursor: pointer;
     &:hover{
-      text-decoration: under
+      text-decoration: underline
     }
   }
 `

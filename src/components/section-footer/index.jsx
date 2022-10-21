@@ -1,6 +1,7 @@
 import ShowMore from '@/assets/svg/showMore'
 import PropTypes from 'prop-types'
 import React, { memo } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { SectionFooterWapper } from './style'
 
 const SectionFooter = memo((props) => {
@@ -10,9 +11,14 @@ const SectionFooter = memo((props) => {
     displayText = `显示全部${name}房源`
   }
 
+  const navigate = useNavigate()
+  const clickHandler = (e) => {
+    navigate('/entire')
+  }
+
   return (
     <SectionFooterWapper color={name ? '#398288' :  '#222222'}>
-      <div className="text">{displayText}</div>
+      <div className="text" onClick={clickHandler}>{displayText}</div>
       <ShowMore />
     </SectionFooterWapper>
   )
