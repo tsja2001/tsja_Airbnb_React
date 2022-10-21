@@ -1,9 +1,10 @@
 import React, { memo } from 'react'
+import { EntireWapper } from './style'
 
-const entire = memo(() => {
+const Entire = memo(() => {
   return (
-    <div>entire</div>
+    <EntireWapper>Entire</EntireWapper>
   )
 })
 
-export default entire
+export default Entire
