@@ -16,7 +16,7 @@ const RoomItem = memo((props) => {
         <div className="tag" style={{ color: data.verify_info.text_color }}>
           {data.verify_info.messages.join('·')}
         </div>
-        <div className="title">{data.name}</div>
+        <div className="title1">{data.name}</div>
         <div className="price">{data.price_format}/晚</div>
         <div className="bottom fr">
           <Rating

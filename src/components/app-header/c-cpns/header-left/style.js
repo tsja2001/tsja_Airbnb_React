@@ -6,8 +6,8 @@ export const LeftWrapper = styled.div`
   display: flex;
   align-items: center;
   .logo {
-    margin-left: 23px;
     cursor: pointer;
+    margin-left: 23px;
   }
 `
 

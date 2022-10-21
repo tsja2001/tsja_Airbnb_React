@@ -5,6 +5,7 @@ import 'normalize.css'
 import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
+import 'antd/dist/antd.css';
 
 // 自己东西导入
 import App from '@/App'

@@ -5,6 +5,7 @@ export const RoomItemWapper = styled.div`
   padding: 0 8px;
   box-sizing: border-box;
   color: ${props => props.theme.font.middle};
+  cursor: pointer;
   .room-item {
     margin-bottom: 14px;
     .imgCover {
@@ -18,13 +19,14 @@ export const RoomItemWapper = styled.div`
         position: absolute;
         top: 0;
         left: 0;
+        object-fit: cover;
       }
     }
     .tag {
       padding-top: 5px;
       font-size: 12px;
     }
-    .title {
+    .title1 {
       font-weight: 600;
       font-size: 12px;
       padding-top: 5px;

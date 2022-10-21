@@ -40,6 +40,7 @@ export const RightWrapper = styled.div`
         background-color: #fff;
         box-shadow: 0 0px 5px rgba(0,0,0,0.18);
         border-radius: 10px;
+        z-index: 999;
         .box{
           padding: 5px 0;
           .lineItem{
